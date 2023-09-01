@@ -1,29 +1,40 @@
-$(document).ready(function() {
-    var itemsPerPage = 4; // Numero di elementi per pagina
-    var $itemContainer = $('.container.clearfix'); // Seleziona il contenitore degli elementi
-    var $paginationControls = $('#pagination-controls');
-  
-    var numItems = $itemContainer.find('.item').length;
-    var numPages = Math.ceil(numItems / itemsPerPage);
-  
-    // Crea i pulsanti di paginazione
-    for (var i = 1; i <= numPages; i++) {
-      $paginationControls.append('<button class="pageBtn">' + i + '</button>');
-    }
-  
-    // Mostra la prima pagina all'inizio
-    showPage(1);
-  
-    // Gestisci il click sui pulsanti di paginazione
-    $paginationControls.on('click', '.pageBtn', function() {
-      var pageNum = $(this).text();
-      showPage(pageNum);
-    });
-  
-    // Funzione per mostrare una pagina specifica
-    function showPage(pageNum) {
-      var startIndex = (pageNum - 1) * itemsPerPage;
-      var endIndex = startIndex + itemsPerPage - 1;
-      $itemContainer.find('.item').hide().slice(startIndex, endIndex + 1).show();
+$(document).ready(function () {
+  var itemsPerPage = 3; // Numero di elementi per pagina
+  var $items = $(".item");
+  var $pagination = $(".pagination ul");
+  var totalItems = $items.length;
+  var totalPages = Math.ceil(totalItems / itemsPerPage);
+  var currentPage = 1;
+
+  // Funzione per mostrare gli elementi della pagina corrente
+  function showPage(page) {
+    $items.hide();
+    var startIndex = (page - 1) * itemsPerPage;
+    var endIndex = startIndex + itemsPerPage;
+    $items.slice(startIndex, endIndex).show();
+  }
+
+  // Genera i link di navigazione della pagination
+  for (var i = 1; i <= totalPages; i++) {
+    var $li = $("<li><a href='#'>" + i + "</a></li>");
+    $pagination.append($li);
+  }
+
+  // Imposta la pagina corrente come attiva
+  $pagination.find("li:first").addClass("active-gallery");
+
+  // Mostra la prima pagina all'avvio
+  showPage(currentPage);
+
+  // Gestisci il click su un link di pagina
+  $pagination.on("click", "a", function (e) {
+    e.preventDefault();
+    var newPage = parseInt($(this).text());
+    if (newPage !== currentPage) {
+      currentPage = newPage;
+      $pagination.find("li").removeClass("active-gallery");
+      $(this).parent().addClass("active-gallery");
+      showPage(currentPage);
     }
   });
+});

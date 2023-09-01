@@ -61,7 +61,7 @@ header {
   position: relative;
 }
 
-.logo h1:after {
+/* .logo h1:after {
   border-bottom: 4px solid #111111;
   content: "";
   display: block;
@@ -70,7 +70,7 @@ header {
   top: 23px;
   width: 14px;
   z-index: 0;
-}
+} */
 
 nav#mainNav {
   float: right;
@@ -87,9 +87,10 @@ nav#mainNav li a {
   display: block;
   padding: 25px 15px;
   position: relative;
+  font-size:20px;
 }
 
-nav#mainNav a.active:after {
+/* nav#mainNav a.active:after {
   border-bottom: 2px solid #111111;
   content: "";
   display: block;
@@ -98,7 +99,7 @@ nav#mainNav a.active:after {
   top: 43px;
   width: 14px;
   z-index: 0;
-}
+} */
 
 .mobileBtn {
   background: #ffffff;
@@ -487,6 +488,10 @@ nav#mainNav a.active:after {
   top: 0;
 }
 
+ .img {
+  height: 260px !important;
+  width:300px !important;
+}
 .projDesc span {
   display: block;
 }
@@ -645,9 +650,10 @@ input[type="number"],
   text-transform: uppercase;
   color: #111111;
   position: relative;
+
 }
 
-.bottomFooter .bLogo:after {
+/* .bottomFooter .bLogo:after {
   border-bottom: 2px solid #111111;
   content: "";
   display: block;
@@ -656,7 +662,7 @@ input[type="number"],
   top: 15px;
   width: 10px;
   z-index: 0;
-}
+} */
 
 .bottomFooter .right {
   float: right;
@@ -1049,26 +1055,8 @@ input[type="number"],
   padding: 20px;
   margin-top: 80px;
 }
-.fa-facebook {
-  background: #3b5998;
-  color: white;
-}
-.fa-instagram {
-	background: #125688;
-	color: white;
-  }
-  .fa-tiktok{
-	
-	color:white
-  }
-  .fa {
-	padding: 20px;
-	font-size: 30px;
-	width: 115px;
-	text-align: center;
-	text-decoration: none;
-	margin: 5px 2px;
-  }
+
+
   /*    display: flex;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 28px;
@@ -1078,4 +1066,22 @@ input[type="number"],
     width: 77px;
     height: 51px;
     /* text-align: center; */
-   
+    .pagination-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; /* Allineamento orizzontale */
+      justify-content: center;
+    }
+    
+    .pagination-list li {
+      padding: 10px;
+    }
+    .pagination-list li a { font-size: 20px;
+      color:#000000}
+    .pagination-list li:last-child {
+      margin-right: 0; /* Rimuovi il margine dell'ultimo elemento */
+    }
+    .active-gallery{
+      border-bottom: 2px solid #000000;
+    }
