@@ -272,8 +272,16 @@ nav#mainNav li a {
   margin-bottom: 30px;
 }
 
-.skillHolder {
-  margin-top: 125px;
+@media(max-width:767px){
+.skillHolder-chi-siamo{
+    margin-top: -175px;
+}
+}
+
+@media(max-width:767px){
+  .skillHolder .poetica-img{
+    margin-top:0
+  }
 }
 .skillholder-about {
   margin-top: 68px;
@@ -1053,7 +1061,10 @@ input[type="number"],
 }
 .chi-siamo-img {
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 100px;
+}
+.poetica-img{
+  margin-top: 100px;
 }
 
 
@@ -1085,3 +1096,4 @@ input[type="number"],
     .active-gallery{
       border-bottom: 2px solid #000000;
     }
+   
