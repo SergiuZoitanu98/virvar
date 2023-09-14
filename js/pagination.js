@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var itemsPerPage = 3; // Numero di elementi per pagina
+  var itemsPerPage = 6; // Numero di elementi per pagina
   var $items = $(".item");
   var $pagination = $(".pagination ul");
   var totalItems = $items.length;

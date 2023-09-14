@@ -343,12 +343,12 @@ nav#mainNav li a {
 /*Facts*/
 
 .factsContainer .overlay {
-  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
   min-height: 300px;
 }
 
+
 .factsContainer {
-  background: url("../images/parallax/virvarparallax.jpg");
+  background: url("../images/virvargallery/paralax1.png");
   background-attachment: fixed;
   background-position: center top;
   background-repeat: repeat-y;
@@ -402,12 +402,11 @@ nav#mainNav li a {
 /*Testimonials and client*/
 
 .testiCliContainer .overlay {
-  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
   min-height: 500px;
 }
 
 .testiCliContainer {
-  background: url(../images/parallax/virvarparallax2.jpg);
+  background: url("../images/virvargallery/paralax2.jpg");
   background-attachment: fixed;
   background-position: center top;
   background-repeat: repeat-y;
